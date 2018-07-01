@@ -17,6 +17,3 @@ def index(request): #home page of website
 
 class ParliamentRecordListView(generic.ListView):
     model = ParliamentRecord
-
-    def get_queryset(self):
-        pass

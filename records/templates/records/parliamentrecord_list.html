@@ -8,7 +8,7 @@
 
       {% for parliamentrecords in parliamentrecords_list %}
       <li>
-        <a href="{{ ParliamentRecord.get_absolute_url }}">{{ ParliamentRecord.title }}</a> {ParliamentRecord.sitting_date}
+        <a href="{{ parliamentrecords.get_absolute.url s}}">{{ parliamentrecord.title }}</a> {{parliamentrecord.sitting_date}}
       </li>
       {% endfor %}
 
