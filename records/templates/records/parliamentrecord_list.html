@@ -3,12 +3,12 @@
 {% block content %}
     <h1>Parliament Records List</h1>
 
-    {% if parliamentrecords_list %}
+    {% if parliamentrecord_list %}
     <ul>
 
-      {% for parliamentrecords in parliamentrecords_list %}
+      {% for parliamentrecord in parliamentrecord_list %}
       <li>
-        <a href="{{ parliamentrecords.get_absolute.url s}}">{{ parliamentrecord.title }}</a> {{parliamentrecord.sitting_date}}
+        <a href="{{ parliamentrecord.get_absolute.url }}">{{ parliamentrecord.title }}</a> {{parliamentrecord.sitting_date}}
       </li>
       {% endfor %}
 
