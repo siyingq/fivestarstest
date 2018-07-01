@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Category, SittingDate, ParliamentRecord
+from django.views import generic 
 
 # Create your views here.
 def index(request): #home page of website
@@ -13,3 +14,9 @@ def index(request): #home page of website
         "index.html", 
         context={'num_records':num_records, 'num_categories':num_categories},
         )
+
+class ParliamentRecordListView(generic.ListView):
+    model = ParliamentRecord
+
+    def get_queryset(self):
+        pass

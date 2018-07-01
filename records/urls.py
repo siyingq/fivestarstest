@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'), #1
+    path('sections/', views.ParliamentRecordListView.as_view(), name='sections'),
 
 ]
 

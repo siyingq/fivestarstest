@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Sections List</h1>
+
+    {% if sections_list %}
+    <ul>
+
+      {% for sections in sections_list %}
+      <li>
+        <a href="{{ ParliamentRecord.get_absolute_url }}">{{ ParliamentRecord.title }}</a> {ParliamentRecord.sitting_date}
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no parliament records in this category.</p>
+    {% endif %}       
+{% endblock %}
