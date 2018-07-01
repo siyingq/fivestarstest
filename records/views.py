@@ -10,6 +10,6 @@ def index(request): #home page of website
 
     return render(
         request, 
-        index.html, 
+        "index.html", 
         context={'num_records':num_records, 'num_categories':num_categories},
         )
