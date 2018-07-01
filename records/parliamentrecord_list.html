@@ -1,12 +1,12 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Sections List</h1>
+    <h1>Parliament Records List</h1>
 
-    {% if sections_list %}
+    {% if parliamentrecords_list %}
     <ul>
 
-      {% for sections in sections_list %}
+      {% for parliamentrecords in parliamentrecords_list %}
       <li>
         <a href="{{ ParliamentRecord.get_absolute_url }}">{{ ParliamentRecord.title }}</a> {ParliamentRecord.sitting_date}
       </li>
